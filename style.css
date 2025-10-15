@@ -1,0 +1,21 @@
+.randomize-buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8rem;
+	margin: auto;
+}
+
+.randomize-buttons > label {
+	position: relative;
+	top: 10px;
+}
+
+.bey {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding-bottom: 2rem;
+}

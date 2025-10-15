@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Beyblade X Generator | jaio.dev</title>
+
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.min.css"
+	>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1 style="text-align: center; padding-top: 4rem;">Beyblade X Random Deck Generator</h1>
+	<div class="container-fluid" style="padding: 2rem; max-width: 48rem;">
+		<article>
+			<div id="beys-container">
+			</div>
+			<div class="randomize-buttons">
+				<label>
+					Number of beys to generate:
+					<input type="number" id="num-beys" value="3" min="1" max="10" style="width: 4rem;">
+				</label>
+				<button id="generate">Generate!</button>
+			</div>
+		</article>
+	</div>
+	<div class="container">
+		<div style="display: flex; justify-content: center; gap: 4rem; margin-bottom: 1rem;">
+			<div style="display: flex; gap: 1rem;">
+				<button id="select-all" class="secondary">Select All</button>
+				<button id="deselect-all" class="secondary">Deselect All</button>
+			</div>
+			<div style="display: flex; gap: 1rem;">
+				<button id="export" class="secondary">Export</button>
+				<button id="import" class="secondary">Import</button>
+			</div>
+		</div>
+		<div class="grid">
+			<article>
+				<h1>Blades</h1>
+				<p>Sorted by TT name, different Hasbro names if applicable will be in parentheses.</p>
+
+				<details open>
+					<summary>Basic Line</summary>
+
+					<article style="background-color: #1C212C;">
+						<details>
+							<summary>Single Releases</summary>
+
+							<div id="basic-single">
+							</div>
+						</details>
+
+						<hr />
+
+						<details>
+							<summary>X-Over Releases</summary>
+
+							<div id="basic-xover">
+							</div>
+						</details>
+
+						<hr />
+
+						<details>
+							<summary>Collab Releases</summary>
+
+							<div id="basic-collab">
+							</div>
+						</details>
+					</article>
+				</details>
+
+				<hr />
+
+				<details open>
+					<summary>Unique Line</summary>
+
+					<div id="unique">
+					</div>
+				</details>
+
+				<hr />
+
+				<details open>
+					<summary>Custom Line</summary>
+
+					<article style="background-color: #1C212C;">
+						<details>
+							<summary>Lock Chips</summary>
+
+							<div id="custom-lockchip">
+							</div>
+						</details>
+
+						<hr />
+
+						<details>
+							<summary>Main Blades</summary>
+
+							<div id="custom-main">
+							</div>
+						</details>
+
+						<hr />
+
+						<details>
+							<summary>Assist Blades</summary>
+
+							<div id="custom-assist">
+							</div>
+						</details>
+					</article>
+				</details>
+			</article>
+
+			<article>
+				<h1>Ratchets</h1>
+
+				<div id="ratchets">
+				</div>
+			</article>
+
+			<article>
+				<h1>Bits</h1>
+
+				<div id="bits">
+				</div>
+			</article>
+		</div>
+
+		<footer style="text-align: center; margin-top: 4rem;">
+			<p>Site by <a href="https://jaio.dev" target="_blank" rel="noopener">Jaio</a> with heavy inspiration by <a href="https://beyxgenerator.jax.fyi/" target="_blank" rel="noopener">jax.fyi</a>
+				<br>Styled using <a href="https://picocss.com" target="_blank" rel="noopener">Pico.css</a>
+				<br>Images sourced from <a href="https://beyblade.fandom.com/wiki/X_Series" target="_blank" rel="noopener">Beyblade Wiki</a></p>
+		</footer>
+	</div>
+
+	<!-- Link JS -->
+	<script src="scripts/populate.js" defer></script>
+	<script src="scripts/randomizer.js" type="module"></script>
+</body>
+</html>
